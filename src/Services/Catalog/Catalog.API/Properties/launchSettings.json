@@ -1,10 +1,5 @@
 ﻿{
-  "DatabaseSettings": {
-    "ConnectionString": "mongodb://localhost:27017",
-    "DatabaseName": "ProductDb",
-    "CollectionName": "Products" 
-  } ,
-  
+
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "iisSettings": {
     "windowsAuthentication": false,
