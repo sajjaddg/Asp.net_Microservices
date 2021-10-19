@@ -12,7 +12,7 @@ namespace Basket.API.Repositories
 
         public BasketRepository(IDistributedCache redisCache)
         {
-            _redisCache = redisCache ?? throw new ArgumentException(nameof(redisCache));
+            _redisCache = redisCache ?? throw new ArgumentNullException(nameof(redisCache));
         }
         public async Task<ShoppingCart> GetBasket(string userName)
         {
