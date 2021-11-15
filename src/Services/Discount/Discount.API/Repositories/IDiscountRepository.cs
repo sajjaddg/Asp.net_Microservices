@@ -6,7 +6,7 @@ using Discount.API.Entities;
 
 namespace Discount.API.Repositories
 {
-    interface IDiscountRepositories
+    public interface IDiscountRepository
     {
         Task<Coupon> GetDiscount(string productName);
         Task<bool> CreateDiscount(Coupon coupon);

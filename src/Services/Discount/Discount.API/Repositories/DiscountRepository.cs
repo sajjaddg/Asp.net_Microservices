@@ -7,11 +7,11 @@ using Dapper;
 
 namespace Discount.API.Repositories
 {
-    public class DiscountRepositories : IDiscountRepositories
+    public class DiscountRepository : IDiscountRepository
     {
         private readonly IConfiguration _configuration;
 
-        public DiscountRepositories(IConfiguration configuration)
+        public DiscountRepository(IConfiguration configuration)
         {
             _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
         }
