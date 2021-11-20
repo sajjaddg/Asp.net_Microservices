@@ -18,7 +18,11 @@ namespace Basket.API
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+                .ConfigureLogging((ctx, logging) =>
+                    
+                        logging.AddConfiguration(ctx.Configuration.GetSection("Logging"))
+                    )
+                    .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
                 });
